@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'social_django' # <- Here
+    'social_django',  # <- Here
 
 ]
 
@@ -128,12 +128,12 @@ LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
 
 AUTHENTICATION_BACKENDS = (
- 'social_core.backends.open_id.OpenIdAuth',
- 'social_core.backends.google.GoogleOpenId',
  'social_core.backends.google.GoogleOAuth2',
-
+ 'social_core.backends.facebook.FacebookOAuth2',
+ 'social_core.backends.deezer.DeezerOAuth2',
  'django.contrib.auth.backends.ModelBackend',
 )
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY =''  #Paste CLient Key
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '' #Paste Secret Key
+# SOCIAL_AUTH_FACEBOOK_REDIRECT_IS_HTTPS = True
+# REDIRECT_IS_HTTPS = True
+# SOCIAL_AUTH_REDIRECT_IS_HTTPS = True

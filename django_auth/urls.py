@@ -7,6 +7,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/$', views.login, name='login'),
     url(r'^logout/$', views.logout, name='logout'),
-    url(r'^auth/', include('social_django.urls', namespace='social')),  # <- Here
+    url(r'^social-auth/', include('social_django.urls', namespace='social')),  # <- Here
     url(r'^$', home, name='home'),
 ]
